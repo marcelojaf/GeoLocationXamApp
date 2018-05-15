@@ -3,12 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GeoLocationXamApp"
              x:Class="GeoLocationXamApp.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         Orientation="Vertical">
+                <Button HorizontalOptions="Center"
+                    Text="Get Location" Clicked="Button_Clicked"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Position Status: "/>
+                    <Label x:Name="lblPositionStatus"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Position Latitude: "/>
+                    <Label x:Name="lblPositionLatitude"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Position Longitude: "/>
+                    <Label x:Name="lblPositionLongitude"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+                <Label x:Name="lblError"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
